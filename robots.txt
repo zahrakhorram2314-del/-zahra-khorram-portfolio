@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zahrakhorram2314-del.github.io/-zahra-khorram-portfolio/sitemap.xml
