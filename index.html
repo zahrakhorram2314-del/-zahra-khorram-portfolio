@@ -1,1 +1,340 @@
 
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Zahra Khorram — Psychology student exploring AI UX research, human-AI interaction, cognitive psychology, and responsible human-centered technology.">
+<title>Zahra Khorram | Psychology Student &amp; AI UX</title>
+<style>
+:root {
+  --primary: #173B45;
+  --secondary: #D9C6A2;
+  --background: #F5F3EE;
+  --text: #243437;
+  --muted: #59686A;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Tahoma, "Segoe UI", sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.9;
+}
+.wrap { width: min(1100px, calc(100% - 40px)); margin: auto; }
+header {
+  background: var(--primary);
+  color: white;
+  padding: 14px 0;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand { font-weight: 800; letter-spacing: .3px; }
+nav { display: flex; flex-wrap: wrap; gap: 22px; }
+a { color: inherit; text-decoration: none; }
+nav a { opacity: .9; font-size: .92rem; }
+nav a:hover, a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.language-button {
+  border: 1px solid #8ba0a0;
+  background: transparent;
+  color: white;
+  border-radius: 10px;
+  padding: 7px 12px;
+  cursor: pointer;
+  font: inherit;
+}
+.hero {
+  background: var(--primary);
+  color: white;
+  padding: clamp(54px, 9vw, 105px) 0 76px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.5fr .8fr;
+  gap: 42px;
+  align-items: center;
+}
+.eyebrow {
+  color: var(--secondary);
+  font-size: .92rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+h1, h2, h3 { line-height: 1.45; }
+h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); margin: 12px 0; }
+.hero p { max-width: 650px; color: #e2e9e6; font-size: 1.08rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 19px;
+  border-radius: 12px;
+  background: var(--secondary);
+  color: #26383A;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+.button.ghost { background: transparent; color: white; border-color: #8ba0a0; }
+.monogram {
+  width: min(230px, 60vw);
+  aspect-ratio: 1;
+  border: 1px solid #82999a;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: auto;
+  color: var(--secondary);
+  font-family: Georgia, serif;
+  font-size: 4.2rem;
+  box-shadow: 0 0 0 18px #ffffff0a, 0 0 0 38px #ffffff06;
+}
+section { padding: clamp(48px, 7vw, 78px) 0; }
+.section-kicker { color: #8a7654; font-size: .86rem; font-weight: 700; }
+h2 { font-size: clamp(1.7rem, 3vw, 2.45rem); margin: 4px 0 18px; color: var(--primary); }
+.lead { max-width: 760px; color: #536367; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+.card {
+  background: white;
+  border: 1px solid #e6e1d7;
+  border-radius: 18px;
+  padding: 24px;
+}
+.card h3 { margin: 0 0 8px; font-size: 1.12rem; color: var(--primary); }
+.card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.project {
+  background: var(--secondary);
+  color: #26383A;
+  border-radius: 22px;
+  padding: clamp(24px, 5vw, 42px);
+  display: grid;
+  grid-template-columns: 1.4fr .6fr;
+  gap: 24px;
+  align-items: center;
+  margin-top: 24px;
+}
+.project h3 { font-size: 1.65rem; margin: 0 0 8px; }
+.project p { margin: 0 0 18px; }
+.project .button { background: var(--primary); color: white; }
+.project-mark {
+  width: 130px;
+  height: 130px;
+  border: 1px solid #8d7959;
+  border-radius: 35% 65% 55% 45%;
+  display: grid;
+  place-items: center;
+  font-size: 2.7rem;
+  margin: auto;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+.tag { border: 1px solid #9b896c; border-radius: 99px; padding: 3px 11px; font-size: .8rem; }
+.contact { background: var(--primary); color: white; }
+.contact h2 { color: var(--secondary); }
+.contact p { color: #e0e9e5; }
+.contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.contact-links a { border: 1px solid #8ba0a0; border-radius: 12px; padding: 8px 15px; }
+footer {
+  background: var(--primary);
+  color: #cbd7d3;
+  border-top: 1px solid #496168;
+  padding: 18px 0;
+  font-size: .85rem;
+}
+footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 760px) {
+  .hero-grid, .project { grid-template-columns: 1fr; }
+  .monogram { width: 145px; font-size: 2.8rem; }
+  .cards { grid-template-columns: 1fr; }
+  .nav { align-items: flex-start; flex-direction: column; }
+  nav { gap: 14px; }
+}
+</style>
+</head>
+<body>
+<div id="app">
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">ZAHRA KHORRAM</a>
+    <nav aria-label="Main navigation">
+      <a href="#about" data-en="About" data-fa="درباره من">About</a>
+      <a href="#focus" data-en="Focus" data-fa="حوزه‌ها">Focus</a>
+      <a href="#work" data-en="Projects" data-fa="پروژه‌ها">Projects</a>
+      <a href="#contact" data-en="Contact" data-fa="ارتباط">Contact</a>
+    </nav>
+    <button class="language-button" id="languageToggle" type="button">فارسی</button>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow" data-en="PSYCHOLOGY · TECHNOLOGY · HUMAN EXPERIENCE" data-fa="روان‌شناسی · فناوری · تجربه انسانی">PSYCHOLOGY · TECHNOLOGY · HUMAN EXPERIENCE</div>
+      <h1 dir="ltr">Zahra Khorram</h1>
+      <p data-en="I am a psychology student learning by asking questions, building small projects, and listening to people. I care about making technology easier to understand and more considerate of the people who use it. I am here to keep learning, share what I discover, and contribute thoughtfully." data-fa="من دانشجوی روان‌شناسی هستم و با پرسیدن سؤال، ساخت پروژه‌های کوچک و گوش‌دادن به تجربه دیگران یاد می‌گیرم. برایم مهم است فناوری برای آدم‌ها قابل‌فهم‌تر و سنجیده‌تر باشد. اینجا هستم تا یاد بگیرم، آموخته‌هایم را به اشتراک بگذارم و با دقت مشارکت کنم.">I am a psychology student learning by asking questions, building small projects, and listening to people. I care about making technology easier to understand and more considerate of the people who use it. I am here to keep learning, share what I discover, and contribute thoughtfully.</p>
+      <div class="hero-actions">
+        <a class="button" href="#work" data-en="Explore projects" data-fa="مشاهده پروژه‌ها">Explore projects</a>
+        <a class="button ghost" href="#about" data-en="About me" data-fa="آشنایی بیشتر">About me</a>
+      </div>
+    </div>
+    <div class="monogram" aria-label="Zahra Khorram monogram">ZK</div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-kicker">ABOUT</div>
+    <h2 data-en="A little about me" data-fa="درباره من">A little about me</h2>
+    <p class="lead" data-en="I am Zahra Khorram, a psychology student at the beginning of my journey in human-centered technology. I do not present myself as an expert; I share what I am learning and the projects I am genuinely working on. I enjoy explaining ideas, helping others learn, and learning from their perspectives too. I value careful work, honest communication, and doing things at a thoughtful pace so I can stay curious and do good work over time." data-fa="من زهرا خرم، دانشجوی روان‌شناسی و در آغاز مسیر یادگیری‌ام در زمینه فناوری انسان‌محور هستم. خودم را متخصص معرفی نمی‌کنم؛ آنچه را واقعاً یاد می‌گیرم و پروژه‌هایی را که روی آن‌ها کار می‌کنم به اشتراک می‌گذارم. از توضیح‌دادن مفاهیم، کمک به یادگیری دیگران و یادگرفتن از نگاه آن‌ها لذت می‌برم. برای کار دقیق، ارتباط صادقانه و پیش‌رفتن با ریتمی متعادل ارزش قائلم تا بتوانم در بلندمدت با علاقه و کیفیت کار کنم.">I am Zahra Khorram, a psychology student at the beginning of my journey in human-centered technology. I do not present myself as an expert; I share what I am learning and the projects I am genuinely working on. I enjoy explaining ideas, helping others learn, and learning from their perspectives too. I value careful work, honest communication, and doing things at a thoughtful pace so I can stay curious and do good work over time.</p>
+  </div>
+</section>
+
+<section id="focus">
+  <div class="wrap">
+    <div class="section-kicker">AREAS OF INTEREST</div>
+    <h2 data-en="What I am exploring" data-fa="حوزه‌هایی که دنبال می‌کنم">What I am exploring</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>AI UX Research</h3>
+        <p data-en="Understanding user needs, behavior, and experiences when interacting with AI-powered products." data-fa="شناخت نیازها، رفتارها و تجربه کاربران هنگام تعامل با محصولات مبتنی بر هوش مصنوعی.">Understanding user needs, behavior, and experiences when interacting with AI-powered products.</p>
+      </article>
+      <article class="card">
+        <h3>Human-AI Interaction</h3>
+        <p data-en="Exploring trust, transparency, user control, and effective collaboration between people and intelligent systems." data-fa="کاوش در اعتماد، شفافیت، کنترل کاربر و همکاری مؤثر میان انسان و سیستم‌های هوشمند.">Exploring trust, transparency, user control, and effective collaboration between people and intelligent systems.</p>
+      </article>
+      <article class="card">
+        <h3>Cognitive Psychology</h3>
+        <p data-en="Learning about attention, memory, and cognitive load—and how they inform digital experience design." data-fa="یادگیری درباره توجه، حافظه و بار شناختی و نقش آن‌ها در طراحی تجربه‌های دیجیتال.">Learning about attention, memory, and cognitive load—and how they inform digital experience design.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-kicker">SELECTED WORK</div>
+    <h2 data-en="Projects & experiments" data-fa="پروژه‌ها و تجربه‌های ساخت">Projects & experiments</h2>
+    <div class="project">
+      <div>
+        <div class="section-kicker">AI JOURNALING · RESPONSIBLE AI</div>
+        <h3>Mana — AI Memory & Journaling Companion</h3>
+        <p data-en="Mana is an AI-powered journaling and personal-reflection companion designed to help people turn memories, thoughts, and personal experiences into meaningful written reflections. It goes beyond a basic journal through guided writing and thoughtful AI assistance, while respecting user autonomy, privacy, and clear ethical boundaries. Mana is not a therapist, a diagnostic system, or a replacement for professional care." data-fa="مانا یک دستیار هوشمند خاطره‌نویسی و خودبازاندیشی مبتنی بر هوش مصنوعی است که کمک می‌کند خاطرات، افکار و تجربه‌های شخصی به نوشته‌هایی منسجم و معنادار تبدیل شوند. مانا فراتر از یک دفتر خاطرات ساده، با نوشتن هدایت‌شده و همراهی هوشمند جمنای کار می‌کند؛ در عین حال استقلال کاربر، حریم خصوصی و مرزهای اخلاقی را جدی می‌گیرد. مانا درمانگر، ابزار تشخیص یا جایگزین مراقبت تخصصی نیست.">Mana is an AI-powered journaling and personal-reflection companion designed to help people turn memories, thoughts, and personal experiences into meaningful written reflections. It goes beyond a basic journal through guided writing and thoughtful AI assistance, while respecting user autonomy, privacy, and clear ethical boundaries. Mana is not a therapist, a diagnostic system, or a replacement for professional care.</p>
+        <div class="tags">
+          <span class="tag">Gemini</span>
+          <span class="tag">Psychology</span>
+          <span class="tag">Human-AI Interaction</span>
+          <span class="tag">Responsible AI</span>
+        </div>
+        <div class="hero-actions">
+          <a class="button" href="https://github.com/zahrakhorram2314-del/mana_ai" target="_blank" rel="noopener" data-en="View on GitHub" data-fa="مشاهده در GitHub">View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-mark" aria-hidden="true">M</div>
+    </div>
+  </div>
+</section>
+
+<section id="experiments">
+  <div class="wrap">
+    <div class="section-kicker">AI TOOLS · PROTOTYPES · HUMAN-CENTERED DESIGN</div>
+    <h2 data-en="Other AI tools I have built and explored" data-fa="دیگر دستیارها و ابزارهای هوشمندی که ساخته‌ام و توسعه داده‌ام">Other AI tools I have built and explored</h2>
+    <p class="lead" data-en="Alongside Mana, I have explored practical AI assistants that bring together language models, user experience thinking, and ideas from cognitive psychology. Each project is designed around a real user need, with ongoing refinement where needed." data-fa="در کنار مانا، دستیارهای کاربردی دیگری را نیز طراحی و توسعه داده‌ام که در آن‌ها از مدل‌های هوش مصنوعی، نگاه تجربه کاربری و مفاهیم روان‌شناسی شناختی استفاده کرده‌ام. هر پروژه حول یک نیاز واقعی کاربر شکل گرفته و بعضی از قابلیت‌ها همچنان در حال اصلاح و بهبود هستند.">Alongside Mana, I have explored practical AI assistants that bring together language models, user experience thinking, and ideas from cognitive psychology. Each project is designed around a real user need, with ongoing refinement where needed.</p>
+    <div class="cards">
+      <article class="card">
+        <h3 data-en="Voice & Audio-to-Text Assistant" data-fa="دستیار هوشمند صدا و تبدیل گفتار به متن">Voice & Audio-to-Text Assistant</h3>
+        <p data-en="An AI assistant that works with uploaded audio files or voice recordings, converts speech into text, and helps users produce the text they need or revise an existing draft with Gemini. The goal is accurate, useful output while keeping the user's instructions and intended meaning central." data-fa="دستیار هوشمندی که فایل صوتی یا صدای ضبط‌شده را دریافت می‌کند، گفتار را به متن تبدیل می‌کند و با کمک جمنای متن موردنیاز کاربر را آماده یا متن موجود را ویرایش می‌کند. هدف، تولید متنی دقیق و کاربردی با حفظ منظور و دستور خود کاربر است.">An AI assistant that works with uploaded audio files or voice recordings, converts speech into text, and helps users produce the text they need or revise an existing draft with Gemini. The goal is accurate, useful output while keeping the user's instructions and intended meaning central.</p>
+      </article>
+      <article class="card">
+        <h3 data-en="Cognitive UX Assistant" data-fa="دستیار تجربه کاربری و روان‌شناسی شناختی">Cognitive UX Assistant</h3>
+        <p data-en="An AI assistant concept combining user-experience principles with cognitive psychology to help people clarify what they need, organize their ideas, and shape more useful results. It considers factors such as attention, cognitive load, clarity, and user control." data-fa="دستیار هوشمندی که اصول تجربه کاربری را با روان‌شناسی شناختی ترکیب می‌کند تا به افراد کمک کند نیازشان را روشن‌تر بیان کنند، ایده‌هایشان را سامان دهند و به خروجی مناسب‌تری برسند. در طراحی آن به توجه، بار شناختی، وضوح و کنترل کاربر توجه شده است.">An AI assistant concept combining user-experience principles with cognitive psychology to help people clarify what they need, organize their ideas, and shape more useful results. It considers factors such as attention, cognitive load, clarity, and user control.</p>
+      </article>
+      <article class="card">
+        <h3 data-en="AI Subtitle & Language Companion" data-fa="دستیار هوشمند زیرنویس و زبان">AI Subtitle & Language Companion</h3>
+        <p data-en="A developing tool concept to help viewers understand films and series in languages they do not speak by providing subtitles in their own language. The translation and subtitle experience still need refinement, and improving accuracy and natural phrasing remains part of the work." data-fa="ایده ابزاری در حال بهبود برای کمک به تماشای فیلم و سریال به زبان‌هایی که مخاطب نمی‌داند؛ با ارائه زیرنویس به زبان مادری او. تجربه ترجمه و نمایش زیرنویس هنوز به اصلاح نیاز دارد و افزایش دقت و طبیعی‌بودن ترجمه بخشی از ادامه کار است.">A developing tool concept to help viewers understand films and series in languages they do not speak by providing subtitles in their own language. The translation and subtitle experience still need refinement, and improving accuracy and natural phrasing remains part of the work.</p>
+      </article>
+      <article class="card">
+        <h3 data-en="AI Private Tutor & Study Assistant" data-fa="دستیار معلم خصوصی و همراه مطالعه">AI Private Tutor & Study Assistant</h3>
+        <p data-en="An AI learning companion designed to support students with explanations, study guidance, and help working through academic topics. Its aim is to adapt support to the learner's needs and encourage understanding, progress, and independent learning—not simply provide answers." data-fa="همراه آموزشی هوشمندی برای کمک به دانش‌آموزان و دانشجویان در فهم مطالب، دریافت توضیح، برنامه‌ریزی مطالعه و پیش‌بردن موضوعات درسی. هدف آن متناسب‌کردن کمک با نیاز یادگیرنده و تقویت فهم، پیشرفت و یادگیری مستقل است؛ نه صرفاً تحویل پاسخ آماده.">An AI learning companion designed to support students with explanations, study guidance, and help working through academic topics. Its aim is to adapt support to the learner's needs and encourage understanding, progress, and independent learning—not simply provide answers.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-kicker">LEARNING · SHARING · COLLABORATING</div>
+    <h2 data-en="How I hope to work with others" data-fa="دوست دارم چطور با دیگران همکاری کنم">How I hope to work with others</h2>
+    <div class="cards">
+      <article class="card">
+        <h3 data-en="Learn and share" data-fa="یادگیری و به‌اشتراک‌گذاری">Learn and share</h3>
+        <p data-en="I enjoy making ideas easier to understand and sharing useful things I learn. Teaching is also a way for me to deepen my own understanding." data-fa="دوست دارم مفاهیم را ساده‌تر توضیح بدهم و چیزهای مفیدی را که یاد می‌گیرم با دیگران به اشتراک بگذارم. آموزش‌دادن راهی برای عمیق‌ترشدن یادگیری خودم هم هست.">I enjoy making ideas easier to understand and sharing useful things I learn. Teaching is also a way for me to deepen my own understanding.</p>
+      </article>
+      <article class="card">
+        <h3 data-en="Work with care" data-fa="کار با دقت و مسئولیت">Work with care</h3>
+        <p data-en="I try to understand the goal, pay attention to details, ask when something is unclear, and be honest about what I can deliver." data-fa="تلاش می‌کنم هدف کار را درست بفهمم، به جزئیات توجه کنم، وقتی چیزی روشن نیست سؤال بپرسم و درباره توانایی و نتیجه‌ای که می‌توانم ارائه کنم صادق باشم.">I try to understand the goal, pay attention to details, ask when something is unclear, and be honest about what I can deliver.</p>
+      </article>
+      <article class="card">
+        <h3 data-en="Grow sustainably" data-fa="رشد با ریتمی پایدار">Grow sustainably</h3>
+        <p data-en="I want to gain real experience through meaningful projects and respectful collaboration, while keeping a balanced pace that protects the quality of my work and my curiosity." data-fa="می‌خواهم از راه پروژه‌های معنادار و همکاری محترمانه تجربه واقعی کسب کنم؛ با ریتمی متعادل که کیفیت کار و علاقه‌ام به یادگیری را حفظ کند.">I want to gain real experience through meaningful projects and respectful collaboration, while keeping a balanced pace that protects the quality of my work and my curiosity.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="section-kicker">GET IN TOUCH</div>
+    <h2 data-en="Connect professionally" data-fa="ارتباط حرفه‌ای">Connect professionally</h2>
+    <p data-en="For conversations about psychology, AI user experience, and learning projects, you can find me through the links below." data-fa="برای گفت‌وگو درباره روان‌شناسی، تجربه کاربری هوش مصنوعی و پروژه‌های یادگیری‌محور، از راه‌های زیر با من در ارتباط باشید.">For conversations about psychology, AI user experience, and learning projects, you can find me through the links below.</p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/zahra-khorram-9a73a6423" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/zahrakhorram2314-del" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Zahra Khorram</span>
+    <span data-en="A portfolio documenting a learning journey." data-fa="وب‌سایتی برای مستندسازی مسیر یادگیری.">A portfolio documenting a learning journey.</span>
+  </div>
+</footer>
+
+</div>
+
+<script>
+const languageToggle = document.getElementById('languageToggle');
+let currentLanguage = 'en';
+
+languageToggle.addEventListener('click', () => {
+  currentLanguage = currentLanguage === 'en' ? 'fa' : 'en';
+  document.documentElement.lang = currentLanguage;
+  document.documentElement.dir = currentLanguage === 'fa' ? 'rtl' : 'ltr';
+
+  document.querySelectorAll('[data-en][data-fa]').forEach((element) => {
+    element.textContent = element.dataset[currentLanguage];
+  });
+
+  languageToggle.textContent = currentLanguage === 'en' ? 'فارسی' : 'English';
+  languageToggle.setAttribute(
+    'aria-label',
+    currentLanguage === 'en' ? 'Switch to Persian' : 'Switch to English'
+  );
+});
+</script>
+
+</body>
+</html>
