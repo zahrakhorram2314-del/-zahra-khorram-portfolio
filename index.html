@@ -1,395 +1,214 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<meta name="google-site-verification" content="9bliDMvUJvIhzVpZR_iGWbgRwCDIX9WQKUK66FEKJLQ" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Zahra Khorram — Psychology student exploring AI UX research, human-AI interaction, cognitive psychology, and responsible human-centered technology.">
-<title>Zahra Khorram | Psychology Student &amp; AI UX</title>
+<title>Zahra Khorram | Psychology Student & AI UX</title>
+<meta name="description" content="Zahra Khorram — psychology student exploring AI UX research, human-AI interaction, cognitive psychology, and responsible human-centered technology.">
+<meta name="google-site-verification" content="9bliDMvUJvIhzVpZR_iGWbgRwCDIX9WQKUK66FEKJLQ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Figtree:wght@400;500;600&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --primary: #173B45;
-  --secondary: #D9C6A2;
-  --background: #F5F3EE;
-  --text: #243437;
-  --muted: #59686A;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: Tahoma, "Segoe UI", sans-serif;
-  background: var(--background);
-  color: var(--text);
-  line-height: 1.9;
-}
-.wrap { width: min(1100px, calc(100% - 40px)); margin: auto; }
-header {
-  background: var(--primary);
-  color: white;
-  padding: 14px 0;
-}
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-.brand { font-weight: 800; letter-spacing: .3px; }
-nav { display: flex; flex-wrap: wrap; gap: 22px; }
-a { color: inherit; text-decoration: none; }
-nav a { opacity: .9; font-size: .92rem; }
-nav a:hover, a:focus-visible {
-  text-decoration: underline;
-  text-underline-offset: 5px;
-}
-.language-button {
-  border: 1px solid #8ba0a0;
-  background: transparent;
-  color: white;
-  border-radius: 10px;
-  padding: 7px 12px;
-  cursor: pointer;
-  font: inherit;
-}
-.hero {
-  background: var(--primary);
-  color: white;
-  padding: clamp(54px, 9vw, 105px) 0 76px;
-}
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.5fr .8fr;
-  gap: 42px;
-  align-items: center;
-}
-.eyebrow {
-  color: var(--secondary);
-  font-size: .92rem;
-  font-weight: 700;
-  letter-spacing: .5px;
-}
-h1, h2, h3 { line-height: 1.45; }
-h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); margin: 12px 0; }
-.hero p { max-width: 650px; color: #e2e9e6; font-size: 1.08rem; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 19px;
-  border-radius: 12px;
-  background: var(--secondary);
-  color: #26383A;
-  font-weight: 700;
-  border: 1px solid transparent;
-}
-.button.ghost { background: transparent; color: white; border-color: #8ba0a0; }
-.monogram {
-  width: min(230px, 60vw);
-  aspect-ratio: 1;
-  border: 1px solid #82999a;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  margin: auto;
-  color: var(--secondary);
-  font-family: Georgia, serif;
-  font-size: 4.2rem;
-  box-shadow: 0 0 0 18px #ffffff0a, 0 0 0 38px #ffffff06;
-}
-section { padding: clamp(48px, 7vw, 78px) 0; }
-.section-kicker { color: #8a7654; font-size: .86rem; font-weight: 700; }
-h2 { font-size: clamp(1.7rem, 3vw, 2.45rem); margin: 4px 0 18px; color: var(--primary); }
-.lead { max-width: 760px; color: #536367; }
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
-.card {
-  background: white;
-  border: 1px solid #e6e1d7;
-  border-radius: 18px;
-  padding: 24px;
-}
-.card h3 { margin: 0 0 8px; font-size: 1.12rem; color: var(--primary); }
-.card p { margin: 0; color: var(--muted); font-size: .95rem; }
-.project {
-  background: var(--secondary);
-  color: #26383A;
-  border-radius: 22px;
-  padding: clamp(24px, 5vw, 42px);
-  display: grid;
-  grid-template-columns: 1.4fr .6fr;
-  gap: 24px;
-  align-items: center;
-  margin-top: 24px;
-}
-.project h3 { font-size: 1.65rem; margin: 0 0 8px; }
-.project p { margin: 0 0 18px; }
-.project .button { background: var(--primary); color: white; }
-.project-mark {
-  width: 130px;
-  height: 130px;
-  border: 1px solid #8d7959;
-  border-radius: 35% 65% 55% 45%;
-  display: grid;
-  place-items: center;
-  font-size: 2.7rem;
-  margin: auto;
-}
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
-.tag { border: 1px solid #9b896c; border-radius: 99px; padding: 3px 11px; font-size: .8rem; }
-.contact { background: var(--primary); color: white; }
-.contact h2 { color: var(--secondary); }
-.contact p { color: #e0e9e5; }
-.contact-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
-.contact-links a { border: 1px solid #8ba0a0; border-radius: 12px; padding: 8px 15px; }
-footer {
-  background: var(--primary);
-  color: #cbd7d3;
-  border-top: 1px solid #496168;
-  padding: 18px 0;
-  font-size: .85rem;
-}
-footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-@media (max-width: 760px) {
-  .hero-grid, .project { grid-template-columns: 1fr; }
-  .monogram { width: 145px; font-size: 2.8rem; }
-  .cards { grid-template-columns: 1fr; }
-  .nav { align-items: flex-start; flex-direction: column; }
-  nav { gap: 14px; }
-}
+:root{--bg:#F1F0FA;--ink:#1B1A3A;--mute:#55547A;--acc:#4B3FD1;--soft:#DCD9F6;--mint:#C4EBDF;--card:#FFFFFF;--line:#CFCCEE}
+@media(prefers-color-scheme:dark){:root{--bg:#14132B;--ink:#EDEBFF;--mute:#A9A7D0;--acc:#9C93FF;--soft:#27254F;--mint:#1E4A44;--card:#1C1B3A;--line:#33315F}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 1.05rem/1.7 Figtree,Vazirmatn,system-ui,sans-serif}
+[dir=rtl] body{font-family:Vazirmatn,Figtree,sans-serif;line-height:1.95}
+h1,h2,h3{font-family:'Bricolage Grotesque',Vazirmatn,sans-serif;line-height:1.15;letter-spacing:-.01em}
+[dir=rtl] h1,[dir=rtl] h2,[dir=rtl] h3{font-family:Vazirmatn,sans-serif;letter-spacing:0;line-height:1.5}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.4rem}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.8rem}
+.logo{font:700 1.05rem 'Bricolage Grotesque',Vazirmatn;text-decoration:none}
+nav{display:flex;gap:1.2rem;align-items:center;font-size:.95rem}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--ink)}
+.lang{border:1.5px solid var(--acc);background:none;color:var(--acc);border-radius:99px;padding:.25rem .9rem;font:600 .9rem Vazirmatn,Figtree;cursor:pointer}
+.lang:hover{background:var(--acc);color:var(--bg)}
+.hero{padding:5.5rem 0 4rem}
+.hero h1{font-size:clamp(2.8rem,8vw,5.6rem);font-weight:700}
+.role{margin-top:.8rem;font-size:1.25rem;color:var(--acc);font-weight:500}
+.lead{margin-top:1.4rem;max-width:36rem;color:var(--mute);font-size:1.15rem}
+.ask{margin-top:2.6rem;background:var(--card);border:1.5px solid var(--line);border-radius:28px 28px 28px 6px;padding:1.6rem 1.8rem;max-width:34rem;position:relative}
+[dir=rtl] .ask{border-radius:28px 28px 6px 28px}
+.ask q{display:block;font:500 clamp(1.3rem,3.4vw,1.8rem)/1.35 'Bricolage Grotesque',Vazirmatn,sans-serif;quotes:none;min-height:2.7em;transition:opacity .45s}
+.ask q.out{opacity:0}
+.ask small{display:block;margin-top:.8rem;color:var(--mute);font-size:.92rem}
+.btns{margin-top:2.2rem;display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.5rem;border-radius:99px;text-decoration:none;font-weight:600;border:1.5px solid var(--acc)}
+.btn.p{background:var(--acc);color:var(--bg)}
+.btn:hover{transform:translateY(-2px)}
+section{padding:4rem 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1.6rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.about p{max-width:34rem}
+.trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.trio div{padding:1.4rem;border-radius:18px;background:var(--soft)}
+.trio div:nth-child(2){background:var(--mint)}
+.trio div:nth-child(3){background:var(--card);border:1.5px solid var(--line)}
+h3{font-size:1.25rem;margin-bottom:.4rem}
+.trio div:nth-child(2),.trio div:nth-child(2) p{color:#12312C}
+@media(prefers-color-scheme:dark){.trio div:nth-child(2),.trio div:nth-child(2) p{color:#DDF5EE}}
+.proj{display:grid;grid-template-columns:1.4fr 1fr;gap:1.2rem}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:22px;padding:1.8rem}
+.card.big{border-color:var(--acc)}
+.card ul{margin:1rem 0;padding-inline-start:1.2rem;color:var(--mute)}
+.card li{margin-bottom:.35rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0}
+.tags span{font-size:.85rem;padding:.15rem .7rem;border-radius:99px;background:var(--soft)}
+.links{display:flex;gap:1.2rem;font-weight:600;margin-top:.8rem}
+.links a{color:var(--acc)}
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1.2rem}
+.mini div{padding:1.3rem;border-radius:18px;border:1.5px dashed var(--line)}
+.mini p{color:var(--mute);font-size:.97rem}
+.sub{margin-top:2.6rem;font-size:1.4rem;font-family:'Bricolage Grotesque',Vazirmatn;font-weight:700}
+footer{padding:2.5rem 0 3rem;border-top:1px solid var(--line);color:var(--mute);font-size:.92rem}
+@media(max-width:760px){.about,.proj{grid-template-columns:1fr}nav a{display:none}.hero{padding-top:3.5rem}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+:root{--bg:#0C0B1D;--ink:#F3F2FF;--mute:#A9A7CE;--acc:#8F80FF;--soft:#1A1940;--mint:#0F3A39;--card:#13122B;--line:#2B2951}
+body{background:var(--bg);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(600px 420px at 85% -5%,rgba(143,128,255,.28),transparent 70%),radial-gradient(520px 380px at 5% 35%,rgba(52,211,170,.12),transparent 70%)}
+header{background:rgba(12,11,29,.7);border-bottom:1px solid var(--line)}
+.hero{padding:6.5rem 0 5rem}
+.hero h1{font-size:clamp(3.2rem,11vw,7.5rem);font-weight:700;letter-spacing:-.04em;line-height:1}
+[dir=rtl] .hero h1{letter-spacing:0}
+.chip{display:inline-flex;align-items:center;gap:.6rem;padding:.35rem 1rem;margin-bottom:1.6rem;border:1px solid var(--line);border-radius:99px;background:rgba(255,255,255,.04);font-size:.9rem;color:var(--mute)}
+.chip i{width:.55rem;height:.55rem;border-radius:50%;background:#34D3AA;box-shadow:0 0 0 0 rgba(52,211,170,.6);animation:pl 2s infinite}
+@keyframes pl{70%{box-shadow:0 0 0 .6rem rgba(52,211,170,0)}100%{box-shadow:0 0 0 0 rgba(52,211,170,0)}}
+.role{font-size:1.35rem;color:var(--ink);margin-top:1rem}
+.ask{background:rgba(255,255,255,.04);backdrop-filter:blur(12px);border-color:rgba(143,128,255,.45);box-shadow:0 20px 60px -20px rgba(143,128,255,.45)}
+.btn.p{background:linear-gradient(135deg,#8F80FF,#6C5CF0);color:#fff;border-color:transparent;box-shadow:0 10px 30px -10px rgba(143,128,255,.8)}
+.btn{border-color:var(--line);color:var(--ink)}
+section{border-top:1px solid var(--line);padding:5rem 0}
+h2{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.03em}
+.trio div,.trio div:nth-child(2),.trio div:nth-child(3){background:var(--card);border:1px solid var(--line);border-radius:22px;padding:1.8rem;transition:border-color .2s,transform .2s}
+.trio div:hover{border-color:var(--acc);transform:translateY(-3px)}
+.trio div:nth-child(2),.trio div:nth-child(2) p{color:var(--ink)}
+.trio p{color:var(--mute)}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:26px;padding:0;overflow:hidden}
+.card>*:not(.win){margin-inline:1.8rem}
+.card>h3{margin-top:1.6rem}
+.card>.links{margin-bottom:1.8rem}
+.card.big{border-color:rgba(143,128,255,.6);box-shadow:0 30px 80px -30px rgba(143,128,255,.5)}
+.win{display:flex;align-items:center;gap:.4rem;padding:.8rem 1.2rem;border-bottom:1px solid var(--line);background:rgba(255,255,255,.04);font-size:.8rem;color:var(--mute)}
+.win b{width:.6rem;height:.6rem;border-radius:50%;background:var(--line)}
+.win b:first-child{background:#FF6B7A}.win b:nth-child(2){background:#FFC857}.win b:nth-child(3){background:#34D3AA}
+.win span{margin-inline-start:.8rem}
+.win em{margin-inline-start:auto;font-style:normal;color:#34D3AA}
+.tags span{background:rgba(143,128,255,.14);color:#C9C3FF;border:1px solid rgba(143,128,255,.3)}
+.mini div{border:1px solid var(--line);border-style:solid;background:var(--card);border-radius:20px}
+.mini h3{font-size:1.1rem}
+.links a{color:#C9C3FF}
+.kick{font-size:.78rem;letter-spacing:.14em;color:var(--acc);margin-bottom:.7rem;font-weight:600}
+[dir=rtl] .kick{letter-spacing:0;font-size:.9rem}
+.card>.kick{margin-top:1.6rem}
+.hg{display:grid;grid-template-columns:1.6fr 1fr;gap:2.5rem;align-items:center}
+.mono{justify-self:center;width:min(240px,60vw);aspect-ratio:1;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font:700 4rem 'Bricolage Grotesque',sans-serif;color:var(--acc);box-shadow:0 0 90px rgba(143,128,255,.35),inset 0 0 40px rgba(143,128,255,.12)}
+.kd{font-weight:600;margin-top:1rem}
+.mini{margin-top:1.4rem}
+.intro{max-width:38rem;color:var(--mute);margin-bottom:1.6rem}
+@media(max-width:760px){.hg{grid-template-columns:1fr}.mono{display:none}}
 </style>
 </head>
 <body>
-<div id="app">
-
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top">ZAHRA KHORRAM</a>
-    <nav aria-label="Main navigation">
-      <a href="#about" data-en="About" data-fa="درباره من">About</a>
-      <a href="#focus" data-en="Focus" data-fa="حوزه‌ها">Focus</a>
-      <a href="#work" data-en="Projects" data-fa="پروژه‌ها">Projects</a>
-      <a href="#contact" data-en="Contact" data-fa="ارتباط">Contact</a>
-    </nav>
-    <button class="language-button" id="languageToggle" type="button">فارسی</button>
-  </div>
-</header>
+<header><div class="wrap">
+<a class="logo" href="#top" data-fa="زهرا خرم">ZAHRA KHORRAM</a>
+<nav>
+<a href="#about" data-fa="درباره من">About</a>
+<a href="#focus" data-fa="تمرکز">Focus</a>
+<a href="#work" data-fa="پروژه‌ها">Projects</a>
+<a href="#contact" data-fa="ارتباط">Contact</a>
+<button class="lang" id="lang" aria-label="Switch language">فارسی</button>
+</nav></div></header>
 
 <main id="top">
+<div class="wrap hero"><div class="hg"><div>
+<p class="kick" data-fa="روان‌شناسی · فناوری · تعامل انسان و هوش مصنوعی · پژوهش UX هوش مصنوعی">PSYCHOLOGY · TECHNOLOGY · Human-AI Interaction . AI UX RESEARCH</p>
+<h1 data-fa="زهرا خرم">Zahra Khorram</h1>
+<p class="lead" data-fa="من هوش مصنوعی را از دریچه‌ی روان‌شناسی و تجربه‌ی انسانی بررسی می‌کنم. به‌ویژه به این علاقه‌مندم که فرایندهای شناختی، اعتماد و استقلال کاربر چگونه تعامل با سیستم‌های هوشمند را شکل می‌دهند. برای بررسی این پرسش‌ها پروژه‌های مستقل می‌سازم، از راه آزمون و خطا یاد می‌گیرم و تجربه‌های هوش مصنوعیِ دقیق‌تر و انسان‌محورتر توسعه می‌دهم.">I approach AI through the lens of psychology and human experience. I’m particularly interested in how cognitive processes, trust, and user autonomy shape interactions with intelligent systems. I create independent projects to explore these questions, learn through experimentation, and develop more thoughtful, human-centered AI experiences.</p>
+<div class="btns">
+<a class="btn p" href="#work" data-fa="کاوش پروژه‌ها">Explore projects</a>
+<a class="btn" href="#about" data-fa="درباره من">About me</a>
+</div></div>
+<div class="mono" aria-hidden="true">ZK</div>
+</div></div>
 
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow" data-en="PSYCHOLOGY · TECHNOLOGY · HUMAN EXPERIENCE" data-fa="تحقیق تجربه کاربری هوش مصنوعی . روان‌شناسی · فناوری">PSYCHOLOGY · TECHNOLOGY · Human-AI Interaction . AI UX RESEARCH</div>
-      <h1 dir="ltr">Zahra Khorram</h1>
-      <div class="intro-text">
-<div class="about-text">
-  <p
-    data-en="I approach AI through the lens of psychology and human experience. I’m particularly interested in how cognitive processes, trust, and user autonomy shape interactions with intelligent systems. I create independent projects to explore these questions, learn through experimentation, and develop more thoughtful, human-centered AI experiences."
-    data-fa="من از دریچه روان‌شناسی و تجربه انسانی به هوش مصنوعی نگاه می‌کنم. به‌ویژه علاقه‌مندم بررسی کنم که فرایندهای شناختی، اعتماد و استقلال کاربر چگونه بر تعامل انسان با سیستم‌های هوشمند تأثیر می‌گذارند. با ساخت پروژه‌های مستقل، این موضوعات را از طریق تجربه و آزمایش بررسی می‌کنم و برای توسعه تجربه‌های هوش مصنوعی انسان‌محور تلاش می‌کنم."
-  >
-    I approach AI through the lens of psychology and human experience. I’m particularly interested in how cognitive processes, trust, and user autonomy shape interactions with intelligent systems. I create independent projects to explore these questions, learn through experimentation, and develop more thoughtful, human-centered AI experiences.
-  </p>
-</div>
-      <div class="hero-actions">
-        <a class="button" href="#work" data-en="Explore projects" data-fa="مشاهده پروژه‌ها">Explore projects</a>
-        <a class="button ghost" href="#about" data-en="About me" data-fa="آشنایی بیشتر">About me</a>
-      </div>
-    </div>
-    <div class="monogram" aria-label="Zahra Khorram monogram">ZK</div>
-  </div>
-</section>
+<section id="about"><div class="wrap about">
+<div><p class="kick" data-fa="درباره من">ABOUT</p><h2 data-fa="کمی درباره من">A little about me</h2></div>
+<p data-fa="من دانشجوی روان‌شناسی هستم که ابزارهای هوش مصنوعی می‌سازد و بررسی می‌کند مردم چگونه آن‌ها را تجربه می‌کنند. پروژه‌هایم، مانند مانا، بر پایه‌ی اعتماد، کنترل کاربر و مرزهای اخلاقی روشن شکل گرفته‌اند. دوست دارم ایده‌ها را ساده توضیح بدهم و از کسانی که از چیزهای ساخته‌ام استفاده می‌کنند یاد بگیرم.">I'm a psychology student who builds AI tools and studies how people experience them. My projects, like Mana, are shaped by trust, user control, and clear ethical boundaries. I enjoy explaining ideas simply and learning from the people who use what I build.</p>
+</div></section>
 
-<section id="about">
-  <div class="wrap">
-    <div class="section-kicker">ABOUT</div>
-    <h2 data-en="A little about me" data-fa="درباره من">A little about me</h2>
-  <p class="lead" data-en="I'm a psychology student who builds AI tools and studies how people experience them. My projects, like Mana, are shaped by trust, user control, and clear ethical boundaries. I enjoy explaining ideas simply and learning from the people who use what I build." data-fa="من دانشجوی روان‌شناسی هستم که ابزارهای هوش مصنوعی می‌سازم و بررسی می‌کنم مردم آن‌ها را چطور تجربه می‌کنند. پروژه‌هایم، مثل مانا، بر پایه‌ی اعتماد، کنترل کاربر و مرزهای اخلاقی روشن شکل گرفته‌اند. دوست دارم مفاهیم را ساده توضیح بدهم و از کسانی که از کارهایم استفاده می‌کنند یاد بگیرم.">I'm a psychology student who builds AI tools and studies how people experience them. My projects, like Mana, are shaped by trust, user control, and clear ethical boundaries. I enjoy explaining ideas simply and learning from the people who use what I build.</p>
-  </div>
-</section>
+<section id="focus"><div class="wrap">
+<p class="kick" data-fa="حوزه‌های علاقه">AREAS OF INTEREST</p>
+<h2 data-fa="آنچه بررسی می‌کنم">What I am exploring</h2>
+<div class="trio">
+<div><h3 data-fa="پژوهش UX هوش مصنوعی">AI UX Research</h3><p data-fa="شناخت نیازها، رفتار و تجربه‌ی کاربران هنگام تعامل با محصولات مبتنی بر هوش مصنوعی.">Understanding user needs, behavior, and experiences when interacting with AI-powered products.</p></div>
+<div><h3 data-fa="تعامل انسان و هوش مصنوعی">Human-AI Interaction</h3><p data-fa="بررسی اعتماد، شفافیت، کنترل کاربر و همکاری مؤثر میان انسان و سیستم‌های هوشمند.">Exploring trust, transparency, user control, and effective collaboration between people and intelligent systems.</p></div>
+<div><h3 data-fa="روان‌شناسی شناختی">Cognitive Psychology</h3><p data-fa="یادگیری درباره‌ی توجه، حافظه و بار شناختی و اینکه چگونه به طراحی تجربه‌ی دیجیتال شکل می‌دهند.">Learning about attention, memory, and cognitive load—and how they inform digital experience design.</p></div>
+</div></div></section>
 
-<section id="focus">
-  <div class="wrap">
-    <div class="section-kicker">AREAS OF INTEREST</div>
-    <h2 data-en="What I am exploring" data-fa="حوزه‌هایی که دنبال می‌کنم">What I am exploring</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>AI UX Research</h3>
-        <p data-en="Understanding user needs, behavior, and experiences when interacting with AI-powered products." data-fa="شناخت نیازها، رفتارها و تجربه کاربران هنگام تعامل با محصولات مبتنی بر هوش مصنوعی.">Understanding user needs, behavior, and experiences when interacting with AI-powered products.</p>
-      </article>
-      <article class="card">
-        <h3>Human-AI Interaction</h3>
-        <p data-en="Exploring trust, transparency, user control, and effective collaboration between people and intelligent systems." data-fa="کاوش در اعتماد، شفافیت، کنترل کاربر و همکاری مؤثر میان انسان و سیستم‌های هوشمند.">Exploring trust, transparency, user control, and effective collaboration between people and intelligent systems.</p>
-      </article>
-      <article class="card">
-        <h3>Cognitive Psychology</h3>
-        <p data-en="Learning about attention, memory, and cognitive load—and how they inform digital experience design." data-fa="یادگیری درباره توجه، حافظه و بار شناختی و نقش آن‌ها در طراحی تجربه‌های دیجیتال.">Learning about attention, memory, and cognitive load—and how they inform digital experience design.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="work">
-  <div class="wrap">
-    <div class="section-kicker">SELECTED WORK</div>
-    <h2 data-en="Projects & experiments" data-fa="پروژه‌ها و تجربه‌های ساخت">Projects & experiments</h2>
-    <div class="project">
-      <div>
-        <div class="section-kicker">AI JOURNALING · RESPONSIBLE AI</div>
-        <h3>Mana — AI Memory & Journaling Companion</h3>
-        <p data-en="Mana is an AI-powered journaling and personal-reflection companion designed to help people turn memories, thoughts, and personal experiences into meaningful written reflections. It goes beyond a basic journal through guided writing and thoughtful AI assistance, while respecting user autonomy, privacy, and clear ethical boundaries. Mana is not a therapist, a diagnostic system, or a replacement for professional care." data-fa="مانا یک دستیار هوشمند خاطره‌نویسی و خودبازاندیشی مبتنی بر هوش مصنوعی است که کمک می‌کند خاطرات، افکار و تجربه‌های شخصی به نوشته‌هایی منسجم و معنادار تبدیل شوند. مانا فراتر از یک دفتر خاطرات ساده، با نوشتن هدایت‌شده و همراهی هوشمند جمنای کار می‌کند؛ در عین حال استقلال کاربر، حریم خصوصی و مرزهای اخلاقی را جدی می‌گیرد. مانا درمانگر، ابزار تشخیص یا جایگزین مراقبت تخصصی نیست.">Mana is an AI-powered journaling and personal-reflection companion designed to help people turn memories, thoughts, and personal experiences into meaningful written reflections. It goes beyond a basic journal through guided writing and thoughtful AI assistance, while respecting user autonomy, privacy, and clear ethical boundaries. Mana is not a therapist, a diagnostic system, or a replacement for professional care.</p>
-       <p style="margin:0 0 6px; font-weight:700;" data-en="Key design decisions" data-fa="تصمیم‌های کلیدی طراحی">Key design decisions</p>
-<ul style="margin:0 0 18px; padding-inline-start:20px;">
-  <li data-en="Faithful memory: Mana never attributes a memory the user did not write." data-fa="حافظه‌ی وفادار: مانا هیچ خاطره‌ای را که کاربر ننوشته به او نسبت نمی‌دهد.">Faithful memory: Mana never attributes a memory the user did not write.</li>
-  <li data-en="User autonomy: it supports the user's own thinking instead of deciding for them." data-fa="استقلال کاربر: به تفکر مستقل کمک می‌کند، نه اینکه به جای کاربر تصمیم بگیرد.">User autonomy: it supports the user's own thinking instead of deciding for them.</li>
-  <li data-en="Questions over advice: instead of interpreting, it asks, for example, “Which part of this made you feel misunderstood?”" data-fa="سؤال به‌جای نصیحت: به‌جای تفسیر می‌پرسد، مثلاً «کدام بخش این اتفاق باعث شد احساس کنی درک نشده‌ای؟»">Questions over advice: instead of interpreting, it asks, for example, “Which part of this made you feel misunderstood?”</li>
-  <li data-en="Clear boundary: a reflection and journaling tool, not therapy or diagnosis." data-fa="مرز روشن: ابزار خودبازتابی و خاطره‌نویسی است، نه درمان یا تشخیص.">Clear boundary: a reflection and journaling tool, not therapy or diagnosis.</li>
+<section id="work"><div class="wrap">
+<p class="kick" data-fa="نمونه‌کارهای منتخب">SELECTED WORK</p>
+<h2 data-fa="پروژه‌ها و آزمایش‌ها">Projects & experiments</h2>
+<div class="proj">
+<article class="card big">
+<div class="win"><b></b><b></b><b></b></div>
+<p class="kick" data-fa="ژورنال‌نویسی با هوش مصنوعی · هوش مصنوعی مسئولانه">AI JOURNALING · RESPONSIBLE AI</p>
+<h3 data-fa="مانا — همراه هوشمند حافظه و ژورنال‌نویسی">Mana — AI Memory & Journaling Companion</h3>
+<p data-fa="مانا یک همراه ژورنال‌نویسی و بازاندیشی شخصی مبتنی بر هوش مصنوعی است که به افراد کمک می‌کند خاطرات، افکار و تجربه‌های شخصی‌شان را به بازتاب‌های نوشتاریِ معنادار تبدیل کنند. مانا با نوشتن هدایت‌شده و کمک فکورانه‌ی هوش مصنوعی از یک ژورنال ساده فراتر می‌رود و در عین حال به استقلال، حریم خصوصی و مرزهای اخلاقی روشن کاربر احترام می‌گذارد. مانا درمانگر، سیستم تشخیصی یا جایگزین مراقبت حرفه‌ای نیست.">Mana is an AI-powered journaling and personal-reflection companion designed to help people turn memories, thoughts, and personal experiences into meaningful written reflections. It goes beyond a basic journal through guided writing and thoughtful AI assistance, while respecting user autonomy, privacy, and clear ethical boundaries. Mana is not a therapist, a diagnostic system, or a replacement for professional care.</p>
+<p class="kd" data-fa="تصمیم‌های کلیدی طراحی">Key design decisions</p>
+<ul>
+<li data-fa="حافظه‌ی وفادار: مانا هرگز خاطره‌ای را که کاربر ننوشته به او نسبت نمی‌دهد.">Faithful memory: Mana never attributes a memory the user did not write.</li>
+<li data-fa="استقلال کاربر: از تفکر خود کاربر پشتیبانی می‌کند، نه اینکه به جای او تصمیم بگیرد.">User autonomy: it supports the user's own thinking instead of deciding for them.</li>
+<li data-fa="سؤال به‌جای توصیه: به‌جای تفسیر کردن می‌پرسد، مثلاً «کدام بخش این موضوع باعث شد احساس کنی درک نشده‌ای؟»">Questions over advice: instead of interpreting, it asks, for example, “Which part of this made you feel misunderstood?”</li>
+<li data-fa="مرز روشن: ابزاری برای بازاندیشی و ژورنال‌نویسی است، نه درمان یا تشخیص.">Clear boundary: a reflection and journaling tool, not therapy or diagnosis.</li>
 </ul>
-        <div class="tags">
-          <span class="tag">Gemini</span>
-          <span class="tag">Psychology</span>
-          <span class="tag">Human-AI Interaction</span>
-          <span class="tag">Responsible AI</span>
-        </div>
-        <div class="hero-actions">
-          <a class="button" href="https://github.com/zahrakhorram2314-del/mana_ai" target="_blank" rel="noopener" data-en="View on GitHub" data-fa="مشاهده در GitHub">View on GitHub</a>
-       <a class="button" href="https://mana-journal-app-2026.ai.studio/" target="_blank" rel="noopener" data-en="Try it live" data-fa="امتحان زنده">Try it live</a>
-        </div>
-      </div>
-      <div class="project-mark" aria-hidden="true">M</div>
-    </div>
-  </div>
-</section>
-  
-
-
-<article class="card">
-  <h3 data-en="Voice & Audio-to-Text Assistant"
-      data-fa="دستیار هوشمند صدا و تبدیل گفتار به متن">
-    Voice & Audio-to-Text Assistant
-  </h3>
-
-<div class="project-description">
-
-  <p
-    data-en="An AI-powered tool for converting audio into text and assisting with writing tasks. Users can upload audio files or record their voice, generate speech-to-text transcriptions, and use Gemini to refine or revise the resulting text. The tool is designed to support different audio workflows while preserving the user's instructions and intended meaning."
-    data-fa="ابزاری مبتنی بر هوش مصنوعی برای تبدیل صدا به متن و کمک به فعالیت‌های نوشتاری است. کاربران می‌توانند فایل‌های صوتی خود را بارگذاری کنند یا صدای خود را ضبط کنند، متن پیاده‌سازی‌شده از گفتار را دریافت کنند و با کمک Gemini آن را بهبود دهند یا بازنویسی کنند. این ابزار با هدف پشتیبانی از فرایندهای مختلف پردازش صوت و حفظ دستورالعمل‌ها و منظور اصلی کاربر طراحی شده است."
-  >
-    An AI-powered tool for converting audio into text and assisting with writing tasks. Users can upload audio files or record their voice, generate speech-to-text transcriptions, and use Gemini to refine or revise the resulting text. The tool is designed to support different audio workflows while preserving the user's instructions and intended meaning.
-  </p>
-
-</div>
-
-  <div class="tags">
-    <span class="tag">Gemini API</span>
-    <span class="tag">Speech-to-Text</span>
-    <span class="tag">Audio Processing</span>
-    <span class="tag">FFmpeg</span>
-    <span class="tag">Voice Recording</span>
-    <span class="tag">AI-Assisted Editing</span>
-  </div>
-
-  <div class="hero-actions">
-    <a class="button"
-       href="https://github.com/zahrakhorram2314-del/ava-ai-transcriber-"
-       target="_blank"
-       rel="noopener noreferrer"
-       data-en="View on GitHub"
-       data-fa="مشاهده در GitHub">
-      View on GitHub
-    </a>
-    <a class="button" href="https://my-av-suite-5698.ai.studio/" target="_blank" rel="noopener noreferrer" data-en="Try it live" data-fa="امتحان زنده">Try it live</a>
-  </div>
+<div class="tags"><span>Gemini</span><span>Psychology</span><span>Human-AI Interaction</span><span>Responsible AI</span></div>
+<div class="links"><a href="https://github.com/zahrakhorram2314-del/mana_ai" data-fa="مشاهده در گیت‌هاب">View on GitHub</a><a href="https://mana-journal-app-2026.ai.studio/" data-fa="امتحان زنده">Try it live</a></div>
 </article>
+<article class="card">
+<div class="win"><b></b><b></b><b></b></div>
+<h3 data-fa="دستیار صدا و تبدیل گفتار به متن">Voice & Audio-to-Text Assistant</h3>
+<p data-fa="ابزاری مبتنی بر هوش مصنوعی برای تبدیل صدا به متن و کمک به کارهای نوشتاری. کاربران می‌توانند فایل صوتی بارگذاری کنند یا صدای خود را ضبط کنند، رونویسی گفتار به متن بگیرند و با Gemini متن حاصل را بهبود یا بازنویسی کنند. این ابزار برای پشتیبانی از جریان‌های کاری صوتی مختلف طراحی شده و دستورهای کاربر و منظور او را حفظ می‌کند.">An AI-powered tool for converting audio into text and assisting with writing tasks. Users can upload audio files or record their voice, generate speech-to-text transcriptions, and use Gemini to refine or revise the resulting text. The tool is designed to support different audio workflows while preserving the user's instructions and intended meaning.</p>
+<div class="tags"><span>Gemini API</span><span>Speech-to-Text</span><span>Audio Processing</span><span>FFmpeg</span><span>Voice Recording</span><span>AI-Assisted Editing</span></div>
+<div class="links"><a href="https://github.com/zahrakhorram2314-del/ava-ai-transcriber-" data-fa="مشاهده در گیت‌هاب">View on GitHub</a><a href="https://my-av-suite-5698.ai.studio/" data-fa="امتحان زنده">Try it live</a></div>
+</article>
+</div></div></section>
 
-<section id="experiments">
-  <div class="wrap">
-    <div class="section-kicker">AI TOOLS · PROTOTYPES · HUMAN-CENTERED DESIGN</div>
-    <h2 data-en="Other AI tools I have built and explored" data-fa="دیگر دستیارها و ابزارهای هوشمندی که ساخته‌ام و توسعه داده‌ام">Other AI tools I have built and explored</h2>
-    <p class="lead" data-en="Alongside Mana, I have explored practical AI assistants that bring together language models, user experience thinking, and ideas from cognitive psychology. Each project is designed around a real user need, with ongoing refinement where needed." data-fa="در کنار مانا، دستیارهای کاربردی دیگری را نیز طراحی و توسعه داده‌ام که در آن‌ها از مدل‌های هوش مصنوعی، نگاه تجربه کاربری و مفاهیم روان‌شناسی شناختی استفاده کرده‌ام. هر پروژه حول یک نیاز واقعی کاربر شکل گرفته و بعضی از قابلیت‌ها همچنان در حال اصلاح و بهبود هستند.">Alongside Mana, I have explored practical AI assistants that bring together language models, user experience thinking, and ideas from cognitive psychology. Each project is designed around a real user need, with ongoing refinement where needed.</p>
-    <div class="cards">
-      
-      <article class="card">
-        <h3 data-en="Cognitive UX Assistant" data-fa="دستیار تجربه کاربری و روان‌شناسی شناختی">Cognitive UX Assistant</h3>
-        <p data-en="An AI assistant concept combining user-experience principles with cognitive psychology to help people clarify what they need, organize their ideas, and shape more useful results. It considers factors such as attention, cognitive load, clarity, and user control." data-fa="دستیار هوشمندی که اصول تجربه کاربری را با روان‌شناسی شناختی ترکیب می‌کند تا به افراد کمک کند نیازشان را روشن‌تر بیان کنند، ایده‌هایشان را سامان دهند و به خروجی مناسب‌تری برسند. در طراحی آن به توجه، بار شناختی، وضوح و کنترل کاربر توجه شده است.">An AI assistant concept combining user-experience principles with cognitive psychology to help people clarify what they need, organize their ideas, and shape more useful results. It considers factors such as attention, cognitive load, clarity, and user control.</p>
-      </article>
-      <article class="card">
-        <h3 data-en="AI Subtitle & Language Companion" data-fa="دستیار هوشمند زیرنویس و زبان">AI Subtitle & Language Companion</h3>
-        <p data-en="A developing tool concept to help viewers understand films and series in languages they do not speak by providing subtitles in their own language. The translation and subtitle experience still need refinement, and improving accuracy and natural phrasing remains part of the work." data-fa="ایده ابزاری در حال بهبود برای کمک به تماشای فیلم و سریال به زبان‌هایی که مخاطب نمی‌داند؛ با ارائه زیرنویس به زبان مادری او. تجربه ترجمه و نمایش زیرنویس هنوز به اصلاح نیاز دارد و افزایش دقت و طبیعی‌بودن ترجمه بخشی از ادامه کار است.">A developing tool concept to help viewers understand films and series in languages they do not speak by providing subtitles in their own language. The translation and subtitle experience still need refinement, and improving accuracy and natural phrasing remains part of the work.</p>
-      </article>
-      <article class="card">
-        <h3 data-en="AI Private Tutor & Study Assistant" data-fa="دستیار معلم خصوصی و همراه مطالعه">AI Private Tutor & Study Assistant</h3>
-        <p data-en="An AI learning companion designed to support students with explanations, study guidance, and help working through academic topics. Its aim is to adapt support to the learner's needs and encourage understanding, progress, and independent learning—not simply provide answers." data-fa="همراه آموزشی هوشمندی برای کمک به دانش‌آموزان و دانشجویان در فهم مطالب، دریافت توضیح، برنامه‌ریزی مطالعه و پیش‌بردن موضوعات درسی. هدف آن متناسب‌کردن کمک با نیاز یادگیرنده و تقویت فهم، پیشرفت و یادگیری مستقل است؛ نه صرفاً تحویل پاسخ آماده.">An AI learning companion designed to support students with explanations, study guidance, and help working through academic topics. Its aim is to adapt support to the learner's needs and encourage understanding, progress, and independent learning—not simply provide answers.</p>
-      </article>
-    </div>
-  </div>
-</section>
+<section><div class="wrap">
+<p class="kick" data-fa="ابزارهای هوش مصنوعی · نمونه‌های اولیه · طراحی انسان‌محور">AI TOOLS · PROTOTYPES · HUMAN-CENTERED DESIGN</p>
+<h2 data-fa="ابزارهای دیگر هوش مصنوعی که ساخته و بررسی کرده‌ام">Other AI tools I have built and explored</h2>
+<p class="intro" data-fa="در کنار مانا، دستیارهای کاربردی هوش مصنوعی را بررسی کرده‌ام که مدل‌های زبانی، تفکر تجربه‌ی کاربری و ایده‌هایی از روان‌شناسی شناختی را کنار هم می‌آورند. هر پروژه حول یک نیاز واقعی کاربر طراحی شده و در صورت نیاز همچنان در حال بهبود است.">Alongside Mana, I have explored practical AI assistants that bring together language models, user experience thinking, and ideas from cognitive psychology. Each project is designed around a real user need, with ongoing refinement where needed.</p>
+<div class="mini">
+<div><h3 data-fa="دستیار UX شناختی">Cognitive UX Assistant</h3><p data-fa="ایده‌ی یک دستیار هوش مصنوعی که اصول تجربه‌ی کاربری را با روان‌شناسی شناختی ترکیب می‌کند تا به افراد کمک کند نیازشان را روشن کنند، ایده‌هایشان را سازمان دهند و نتایج مفیدتری بسازند. عواملی مانند توجه، بار شناختی، وضوح و کنترل کاربر را در نظر می‌گیرد.">An AI assistant concept combining user-experience principles with cognitive psychology to help people clarify what they need, organize their ideas, and shape more useful results. It considers factors such as attention, cognitive load, clarity, and user control.</p></div>
+<div><h3 data-fa="همراه هوشمند زیرنویس و زبان">AI Subtitle & Language Companion</h3><p data-fa="ایده‌ی ابزاری در حال توسعه که با ارائه‌ی زیرنویس به زبان خود بیننده، به او کمک می‌کند فیلم‌ها و سریال‌هایی را به زبان‌هایی که نمی‌داند بفهمد. تجربه‌ی ترجمه و زیرنویس هنوز نیاز به بهبود دارد و ارتقای دقت و روانی عبارت‌ها همچنان بخشی از کار است.">A developing tool concept to help viewers understand films and series in languages they do not speak by providing subtitles in their own language. The translation and subtitle experience still need refinement, and improving accuracy and natural phrasing remains part of the work.</p></div>
+<div><h3 data-fa="معلم خصوصی و دستیار مطالعه با هوش مصنوعی">AI Private Tutor & Study Assistant</h3><p data-fa="همراه یادگیری مبتنی بر هوش مصنوعی که برای پشتیبانی از دانشجویان با توضیح، راهنمایی مطالعه و کمک در حل موضوعات درسی طراحی شده است. هدفش تطبیق پشتیبانی با نیاز یادگیرنده و تشویق فهم، پیشرفت و یادگیری مستقل است، نه صرفاً دادن پاسخ.">An AI learning companion designed to support students with explanations, study guidance, and help working through academic topics. Its aim is to adapt support to the learner's needs and encourage understanding, progress, and independent learning—not simply provide answers.</p></div>
+</div></div></section>
 
-<section>
-  <div class="wrap">
-    <div class="section-kicker">LEARNING · SHARING · COLLABORATING</div>
-    <h2 data-en="How I hope to work with others" data-fa="دوست دارم چطور با دیگران همکاری کنم">How I hope to work with others</h2>
-    <div class="cards">
-      <article class="card">
-        <h3 data-en="Learn and share" data-fa="یادگیری و به‌اشتراک‌گذاری">Learn and share</h3>
-        <p data-en="I enjoy making ideas easier to understand and sharing useful things I learn. Teaching is also a way for me to deepen my own understanding." data-fa="دوست دارم مفاهیم را ساده‌تر توضیح بدهم و چیزهای مفیدی را که یاد می‌گیرم با دیگران به اشتراک بگذارم. آموزش‌دادن راهی برای عمیق‌ترشدن یادگیری خودم هم هست.">I enjoy making ideas easier to understand and sharing useful things I learn. Teaching is also a way for me to deepen my own understanding.</p>
-      </article>
-      <article class="card">
-        <h3 data-en="Work with care" data-fa="کار با دقت و مسئولیت">Work with care</h3>
-        <p data-en="I try to understand the goal, pay attention to details, ask when something is unclear, and be honest about what I can deliver." data-fa="تلاش می‌کنم هدف کار را درست بفهمم، به جزئیات توجه کنم، وقتی چیزی روشن نیست سؤال بپرسم و درباره توانایی و نتیجه‌ای که می‌توانم ارائه کنم صادق باشم.">I try to understand the goal, pay attention to details, ask when something is unclear, and be honest about what I can deliver.</p>
-      </article>
-      <article class="card">
-        <h3 data-en="Grow sustainably" data-fa="رشد با ریتمی پایدار">Grow sustainably</h3>
-        <p data-en="I want to gain real experience through meaningful projects and respectful collaboration, while keeping a balanced pace that protects the quality of my work and my curiosity." data-fa="می‌خواهم از راه پروژه‌های معنادار و همکاری محترمانه تجربه واقعی کسب کنم؛ با ریتمی متعادل که کیفیت کار و علاقه‌ام به یادگیری را حفظ کند.">I want to gain real experience through meaningful projects and respectful collaboration, while keeping a balanced pace that protects the quality of my work and my curiosity.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="section-kicker">GET IN TOUCH</div>
-    <h2 data-en="Connect professionally" data-fa="ارتباط حرفه‌ای">Connect professionally</h2>
-    <p data-en="For conversations about psychology, AI user experience, and learning projects, you can find me through the links below." data-fa="برای گفت‌وگو درباره روان‌شناسی، تجربه کاربری هوش مصنوعی و پروژه‌های یادگیری‌محور، از راه‌های زیر با من در ارتباط باشید.">For conversations about psychology, AI user experience, and learning projects, you can find me through the links below.</p>
-    <div class="contact-links">
-      <a href="https://www.linkedin.com/in/zahra-khorram-9a73a6423" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/zahrakhorram2314-del" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </div>
-</section>
-
+<section id="contact"><div class="wrap">
+<p class="kick" data-fa="ارتباط">GET IN TOUCH</p>
+<h2 data-fa="ارتباط حرفه‌ای">Connect professionally</h2>
+<p class="intro" data-fa="برای گفتگو درباره‌ی روان‌شناسی، تجربه‌ی کاربری هوش مصنوعی و پروژه‌های یادگیری، می‌توانید از طریق لینک‌های زیر مرا پیدا کنید.">For conversations about psychology, AI user experience, and learning projects, you can find me through the links below.</p>
+<div class="btns">
+<a class="btn p" href="https://www.linkedin.com/in/zahra-khorram-9a73a6423">LinkedIn</a>
+<a class="btn" href="https://github.com/zahrakhorram2314-del">GitHub</a>
+</div></div></section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© Zahra Khorram</span>
-    <span data-en="A portfolio documenting a learning journey." data-fa="وب‌سایتی برای مستندسازی مسیر یادگیری.">A portfolio documenting a learning journey.</span>
-  </div>
-</footer>
-
-</div>
+<footer><div class="wrap" data-fa="© زهرا خرم. نمونه‌کاری که مسیر یادگیری من را ثبت می‌کند.">© Zahra Khorram A portfolio documenting a learning journey.</div></footer>
 
 <script>
-const languageToggle = document.getElementById('languageToggle');
-let currentLanguage = 'en';
-
-languageToggle.addEventListener('click', () => {
-  currentLanguage = currentLanguage === 'en' ? 'fa' : 'en';
-  document.documentElement.lang = currentLanguage;
-  document.documentElement.dir = currentLanguage === 'fa' ? 'rtl' : 'ltr';
-
-  document.querySelectorAll('[data-en][data-fa]').forEach((element) => {
-    element.textContent = element.dataset[currentLanguage];
-  });
-
-  languageToggle.textContent = currentLanguage === 'en' ? 'فارسی' : 'English';
-  languageToggle.setAttribute(
-    'aria-label',
-    currentLanguage === 'en' ? 'Switch to Persian' : 'Switch to English'
-  );
-});
+const els=[...document.querySelectorAll("[data-fa]")];
+els.forEach(e=>e.dataset.en=e.textContent);
+function setLang(l){document.documentElement.lang=l;document.documentElement.dir=l=="fa"?"rtl":"ltr";
+els.forEach(e=>e.textContent=e.dataset[l]);document.getElementById("lang").textContent=l=="fa"?"English":"فارسی";
+try{localStorage.setItem("lang",l)}catch(e){}}
+document.getElementById("lang").onclick=()=>setLang(document.documentElement.lang=="en"?"fa":"en");
+let s;try{s=localStorage.getItem("lang")}catch(e){}
+if(s=="fa")setLang("fa");
 </script>
-
 </body>
 </html>
