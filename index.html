@@ -284,7 +284,7 @@ if(s=="fa")setLang("fa");
       });
       const data=await response.json();
       if(!response.ok)throw new Error(data.error||"Request failed");
-      addMessage(data.reply||data.response||copy("I couldn't prepare a response.","نتوانستم پاسخی آماده کنم."),"bot");
+      addMessage(data.answer||data.reply||data.response||copy("I couldn't prepare a response.","نتوانستم پاسخی آماده کنم."),"bot");
     }catch(err){
       addMessage(copy("Sorry, the connection is temporarily unavailable.","متأسفم، اتصال موقتاً در دسترس نیست."),"bot");
     }finally{send.disabled=false;}
