@@ -112,6 +112,26 @@ h2{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.03em}
 .intro{max-width:38rem;color:var(--mute);margin-bottom:1.6rem}
 @media(max-width:760px){.hg{grid-template-columns:1fr}.mono{display:none}}
 </style>
+
+<style id="mana-chat-widget-styles">
+#mana-chat-widget{position:fixed;bottom:22px;right:22px;z-index:9999;font-family:inherit;color:#17243b}
+#mana-chat-toggle{border:0;border-radius:999px;padding:13px 19px;background:#172b4d;color:#fff;font-weight:700;box-shadow:0 8px 28px #10213b35;cursor:pointer}
+#mana-chat-panel{display:none;position:absolute;right:0;bottom:62px;width:min( min(360px, calc(100vw - 32px)), 360px);height: min(490px, calc(100vh - 120px));background:#fff;border:1px solid #dce3ed;border-radius:18px;box-shadow:0 16px 50px #10213b30;overflow:hidden;flex-direction:column}
+#mana-chat-panel.open{display:flex}
+#mana-chat-head{padding:15px 16px;background:#172b4d;color:#fff;display:flex;justify-content:space-between;align-items:center}
+#mana-chat-head strong{font-size:15px}
+#mana-chat-close{border:0;background:transparent;color:#fff;font-size:22px;cursor:pointer}
+#mana-chat-messages{padding:14px;flex:1;overflow:auto;background:#f7f9fc;display:flex;flex-direction:column;gap:10px}
+.mana-msg{max-width:88%;padding:10px 12px;border-radius:13px;font-size:13px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere}
+.mana-msg.bot{align-self:flex-start;background:#fff;border:1px solid #e5eaf1}
+.mana-msg.user{align-self:flex-end;background:#e7eef9;color:#172b4d}
+#mana-chat-form{display:flex;gap:8px;padding:12px;border-top:1px solid #e8edf3;background:#fff}
+#mana-chat-input{min-width:0;flex:1;border:1px solid #d8e0eb;border-radius:10px;padding:10px;font:inherit;font-size:13px}
+#mana-chat-send{border:0;border-radius:10px;padding:0 14px;background:#172b4d;color:#fff;font-weight:700;cursor:pointer}
+#mana-chat-send:disabled{opacity:.5;cursor:wait}
+#mana-chat-note{padding:0 12px 10px;font-size:10px;color:#778398;background:#fff}
+@media(max-width:480px){#mana-chat-widget{right:14px;bottom:14px}#mana-chat-panel{position:fixed;right:12px;bottom:72px;width:calc(100vw - 24px);height:min(72vh,540px)}}
+</style>
 </head>
 <body>
 <header><div class="wrap">
@@ -209,6 +229,67 @@ try{localStorage.setItem("lang",l)}catch(e){}}
 document.getElementById("lang").onclick=()=>setLang(document.documentElement.lang=="en"?"fa":"en");
 let s;try{s=localStorage.getItem("lang")}catch(e){}
 if(s=="fa")setLang("fa");
+</script>
+
+<div id="mana-chat-widget" aria-live="polite">
+  <section id="mana-chat-panel" aria-label="Mana portfolio assistant">
+    <header id="mana-chat-head"><strong>Mana · Portfolio Assistant</strong><button id="mana-chat-close" type="button" aria-label="Close">×</button></header>
+    <div id="mana-chat-messages"></div>
+    <form id="mana-chat-form"><input id="mana-chat-input" maxlength="2000" autocomplete="off" placeholder="Ask about my public portfolio..." aria-label="Message"><button id="mana-chat-send" type="submit">Send</button></form>
+    <div id="mana-chat-note">Only public, approved portfolio information is available here.</div>
+  </section>
+  <button id="mana-chat-toggle" type="button">✦ Chat with Mana</button>
+</div>
+<script id="mana-chat-widget-script">
+(function(){
+  const API_BASE = "https://YOUR-RENDER-SERVICE.onrender.com";
+  const panel=document.getElementById("mana-chat-panel");
+  const toggle=document.getElementById("mana-chat-toggle");
+  const close=document.getElementById("mana-chat-close");
+  const messages=document.getElementById("mana-chat-messages");
+  const form=document.getElementById("mana-chat-form");
+  const input=document.getElementById("mana-chat-input");
+  const send=document.getElementById("mana-chat-send");
+  const fa=()=>document.documentElement.lang==="fa";
+  const copy=(en,faText)=>fa()?faText:en;
+  function addMessage(text,role){
+    const el=document.createElement("div");
+    el.className="mana-msg "+role;
+    el.textContent=text;
+    messages.appendChild(el);
+    messages.scrollTop=messages.scrollHeight;
+  }
+  toggle.addEventListener("click",()=>{
+    panel.classList.toggle("open");
+    if(panel.classList.contains("open") && !messages.childElementCount){
+      addMessage(copy("Hello! I’m Mana. I can answer questions using only the public information approved for this portfolio.","سلام! من مانا هستم. فقط درباره اطلاعات عمومی و تأییدشده این پورتفولیو پاسخ می‌دهم."),"bot");
+      if(API_BASE.includes("YOUR-RENDER-SERVICE")) addMessage(copy("Live chat is not connected yet. The secure server needs to be deployed first.","گفت‌وگوی زنده هنوز متصل نشده است؛ ابتدا باید سرور امن مستقر شود."),"bot");
+    }
+  });
+  close.addEventListener("click",()=>panel.classList.remove("open"));
+  form.addEventListener("submit",async(e)=>{
+    e.preventDefault();
+    const message=input.value.trim();
+    if(!message)return;
+    addMessage(message,"user");input.value="";
+    if(API_BASE.includes("YOUR-RENDER-SERVICE")){
+      addMessage(copy("The assistant is not connected yet. Please check back after deployment.","دستیار هنوز به سرور متصل نشده است. پس از استقرار دوباره مراجعه کنید."),"bot");
+      return;
+    }
+    send.disabled=true;
+    try{
+      const response=await fetch(API_BASE.replace(/\/$/,"")+"/api/chat",{
+        method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({message,language:fa()?"fa":"en"})
+      });
+      const data=await response.json();
+      if(!response.ok)throw new Error(data.error||"Request failed");
+      addMessage(data.reply||data.response||copy("I couldn't prepare a response.","نتوانستم پاسخی آماده کنم."),"bot");
+    }catch(err){
+      addMessage(copy("Sorry, the connection is temporarily unavailable.","متأسفم، اتصال موقتاً در دسترس نیست."),"bot");
+    }finally{send.disabled=false;}
+  });
+})();
 </script>
 </body>
 </html>
