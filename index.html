@@ -263,7 +263,7 @@ if(s=="fa")setLang("fa");
     panel.classList.toggle("open");
     if(panel.classList.contains("open") && !messages.childElementCount){
       addMessage(copy("Hello! I’m Mana. I can answer questions using only the public information approved for this portfolio.","سلام! من مانا هستم. فقط درباره اطلاعات عمومی و تأییدشده این پورتفولیو پاسخ می‌دهم."),"bot");
-      if(API_BASE.includes("YOUR-RENDER-SERVICE")) addMessage(copy("Live chat is not connected yet. The secure server needs to be deployed first.","گفت‌وگوی زنده هنوز متصل نشده است؛ ابتدا باید سرور امن مستقر شود."),"bot");
+      if(CHAT_API_URL.includes("YOUR-RENDER-SERVICE")) addMessage(copy("Live chat is not connected yet. The secure server needs to be deployed first.","گفت‌وگوی زنده هنوز متصل نشده است؛ ابتدا باید سرور امن مستقر شود."),"bot");
     }
   });
   close.addEventListener("click",()=>panel.classList.remove("open"));
@@ -272,7 +272,7 @@ if(s=="fa")setLang("fa");
     const message=input.value.trim();
     if(!message)return;
     addMessage(message,"user");input.value="";
-    if(API_BASE.includes("YOUR-RENDER-SERVICE")){
+    if(CHAT_API_URL.includes("YOUR-RENDER-SERVICE")){
       addMessage(copy("The assistant is not connected yet. Please check back after deployment.","دستیار هنوز به سرور متصل نشده است. پس از استقرار دوباره مراجعه کنید."),"bot");
       return;
     }
